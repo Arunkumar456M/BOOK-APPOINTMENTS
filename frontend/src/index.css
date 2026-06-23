@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-ice text-navy-900 dark:bg-navy-950 dark:text-ice;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+::selection {
+  background: #2868F0;
+  color: white;
+}
+
+:focus-visible {
+  outline: 2px solid #2868F0;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full bg-brand-500 px-6 py-3 font-semibold text-white shadow-glow transition-all hover:bg-brand-600 hover:-translate-y-0.5 active:translate-y-0;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full border border-navy-800/15 bg-white px-6 py-3 font-semibold text-navy-900 transition-all hover:-translate-y-0.5 hover:border-brand-500/40 dark:border-white/15 dark:bg-navy-800 dark:text-ice;
+}
+
+.card {
+  @apply rounded-xl2 border border-navy-900/5 bg-white shadow-card dark:border-white/10 dark:bg-navy-800;
+}
+
+.input {
+  @apply w-full rounded-xl border border-navy-900/10 bg-white px-4 py-3 text-sm text-navy-900 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 dark:border-white/10 dark:bg-navy-900 dark:text-ice;
+}
